@@ -38,3 +38,10 @@ while [ "$1" != "" ]; do
 done
 
 docker-compose down $REMOVE_VOLUMES $REMOVE_IMAGES
+
+# Remove cron expressions
+
+TEMP_FILE=".crontab.tmp"
+crontab -l | grep -v 'renew_certs.sh' | grep -v 'reload_nginx_conf.sh' > $TEMP_FILE
+sudo crontab -u $USER ./$TEMP_FILE
+rm ./$TEMP_FILE

@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/bin/bash
 
 REMOVE_IMAGES=""
 REMOVE_VOLUMES=""
@@ -37,7 +37,7 @@ while [ "$1" != "" ]; do
     shift
 done
 
-docker-compose down $REMOVE_VOLUMES $REMOVE_IMAGES
+docker compose down $REMOVE_VOLUMES $REMOVE_IMAGES
 
 # Remove cron expressions
 

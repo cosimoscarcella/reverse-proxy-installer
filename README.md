@@ -119,7 +119,7 @@ To get your Server installation running follow these simple steps.
 
 1. Run shell command
    ```sh
-   sh uninstall.sh
+   ./uninstall.sh
    ```
 2. Use ```-h | --help``` option for further information
 

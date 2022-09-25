@@ -1,0 +1,6 @@
+configuration/certbot/**
+
+.DS_Store
+
+*/logs/*
+*.log
